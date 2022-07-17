@@ -23,7 +23,7 @@ def init_windows():
 
 def send_raspi_command(terminal_window, firefox_window):
     terminal_window.set_focus()
-    pywinauto.keyboard.send_keys('python run_motors.py{ENTER}')
+    pywinauto.keyboard.send_keys('python{SPACE}run_motors.py{ENTER}')
     firefox_window.set_focus()
 
 if __name__ == "__main__":
