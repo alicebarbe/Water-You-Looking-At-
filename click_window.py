@@ -13,7 +13,7 @@ for w in windows:
     print(w.window_text())
 
 def init_windows():
-    terminal_app = pywinauto.application.Application().connect(title_re=".*(anaconda3)")
+    terminal_app = pywinauto.application.Application().connect(title_re=".*pi@raspberrypi: ~/RandomCode/RPi")
     firefox_app = pywinauto.application.Application().connect(title_re=".*Firefox")
 
     terminal_window = terminal_app.window()
@@ -23,7 +23,7 @@ def init_windows():
 
 def send_raspi_command(terminal_window, firefox_window):
     terminal_window.set_focus()
-    pywinauto.keyboard.send_keys('python{SPACE}run_motors.py{ENTER}')
+    pywinauto.keyboard.send_keys('python{SPACE}project_eye_cleaner.py{ENTER}')
     firefox_window.set_focus()
 
 if __name__ == "__main__":
